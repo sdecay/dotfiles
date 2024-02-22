@@ -130,6 +130,7 @@ alias cz="czkawka-gui&"
 alias rn="ranger"
 alias ls="exa"
 alias find="fd"
+alias btop="bpytop"
 
 alias vim="$EDITOR"
 alias vi="$EDITOR"
@@ -142,6 +143,8 @@ alias vfr="$EDITOR \$(find * -type f |fzf)"
 
 # pkg manager aliases
 alias pdd="pacman -Qdt"
+alias pkgs="pacman -Qqen > ~/Documents/packages.txt"
+alias pkgsa="pacman -Qqem > ~/Documents/packages_aur.txt"
 
 # mounts
 alias mx="sudo mount -t cifs //asmodeus/jay /mnt/x -o username=jay,uid=1000,gid=1000"
