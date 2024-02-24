@@ -32,4 +32,10 @@ lspconfig.gopls.setup {
 			},
 		},
 	},
+
+	lspconfig.pyright.setup {
+		on_attach = on_attach,
+		capabilities = capabilities,
+		filetypes = { "python" },
+	},
 }

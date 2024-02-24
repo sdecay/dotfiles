@@ -16,6 +16,7 @@ local sources = {
 
 	-- python stuff
 	b.diagnostics.ruff,
+	b.diagnostics.mypy,
 
 	-- -- go stuff
 	b.formatting.gofumpt,
