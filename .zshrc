@@ -135,16 +135,16 @@ alias btop="bpytop"
 alias vim="$EDITOR"
 alias vi="$EDITOR"
 alias tn="tmux new -s"
-alias cs="cd \$(find ~/* -type d | fzf)"
+alias cs="cd \$(find ~/* --type directory | fzf)"
 alias c-="cd -"
 alias vsh="$EDITOR ~/.zshrc"
-alias vf="$EDITOR \$(find . -type f |fzf)"
-alias vfr="$EDITOR \$(find * -type f |fzf)"
+alias vf="$EDITOR \$(find . --type file |fzf)"
+alias vfr="$EDITOR \$(find * --type file |fzf)"
 
 # pkg manager aliases
 alias pdd="pacman -Qdt"
-alias pkgs="pacman -Qqen > ~/Documents/packages.txt"
-alias pkgsa="pacman -Qqem > ~/Documents/packages_aur.txt"
+alias pkgs="pacman -Qqen > ~/Documents/packages.txt && echo Exported pacman packages"
+alias pkgsa="pacman -Qqem > ~/Documents/packages_aur.txt && echo Exported yay packages"
 
 # mounts
 alias mx="sudo mount -t cifs //asmodeus/jay /mnt/x -o username=jay,uid=1000,gid=1000"
@@ -155,11 +155,6 @@ alias dotf='/usr/bin/git --git-dir=$HOME/Documents/dotfiles --work-tree=$HOME'
 
 # other
 export BAT_THEME="Dracula"
-
-# fpath+=($HOME/.zsh/pure)
-# autoload -U promptinit; promptinit 
-# prompt pure
-#
 
 eval "$(zoxide init --cmd z zsh)"
 eval "$(starship init zsh)"
